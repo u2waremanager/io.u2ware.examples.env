@@ -1,33 +1,45 @@
-# 1. Build Image
+# Build Image
 
-> docker build -t ros_humble:aptgetter .
+> docker build -t ros_{humble or rolling}:aptgetter .
 
 
-# 2. Run
+# Running - [ros_#1_shell]
 
-> {my_ros#1} docker run \
+> [ros_#1_shell] docker run \
     --rm -it \
     --name my_ros \
     ros_humble:aptgetter \
     bash
 
-                                                -e DISPLAY="host.docker.internal:0" \
-                                                --privileged  \
-                                                --hostname $(hostname) \
-                                                --network host \
-                                                --env="QT_X11_NO_MITSHM=1" \
-                                                -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+<!-- 
+    -e DISPLAY="host.docker.internal:0" \
+    --privileged  \
+    --hostname $(hostname) \
+    --network host \
+    --env="QT_X11_NO_MITSHM=1" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix:ro \ 
+-->
+> [ros_#1_shell] echo $ROS_DISTRO
+
+# Running - [ros_#2_shell]
+
+> [ros_#2_shell] docker exec -it my_ros /bin/bash
+
+> [ros_#2_shell] echo $ROS_DISTRO
 
 
-> {my_ros#2} docker exec -it my_ros /bin/bash
+# Test - talker & listener
 
-> {my_ros#1} echo $ROS_DISTRO
-> {my_ros#2} echo $ROS_DISTRO
 
-> {my_ros#1} ros2 run demo_nodes_cpp talker
-> {my_ros#2} ros2 run demo_nodes_py listener
+> {ros_#1_shell} ros2 run demo_nodes_cpp talker
 
-> {my_ros#1} ros2 run turtlesim turtlesim_node
-> {my_ros#2} ros2 run turtlesim turtle_teleop_key
+> [ros_#2_shell] ros2 run demo_nodes_py listener
+
+
+# Test - turtlesim
+
+> [ros_#1_shell] ros2 run turtlesim turtlesim_node
+
+> [ros_#2_shell] ros2 run turtlesim turtle_teleop_key
 
 
