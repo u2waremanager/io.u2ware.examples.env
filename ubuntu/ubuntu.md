@@ -23,5 +23,5 @@
 > docker exec -it my_ubuntu bash
 
 
-
->>> lsb_release -a
+# version
+>> lsb_release -a
