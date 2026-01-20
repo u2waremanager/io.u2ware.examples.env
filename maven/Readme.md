@@ -56,6 +56,26 @@
 ```
 
 
+# Installing
+
+### pom.xml
+```xml
+.
+.
+  <dependency>
+    <groupId>[GROUP]</groupId>
+    <artifactId>[ARTIFACT]</artifactId>
+    <version>[VERSION]</version>
+  </dependency>
+.
+.
+```
+
+```bash
+mvn compile
+```
+
+
 # Publishing
 
 ### pom.xml
@@ -80,23 +100,4 @@
 
 ```bash
 mvn deploy
-```
-
-# Installing
-
-### pom.xml
-```xml
-.
-.
-  <dependency>
-    <groupId>[GROUP]</groupId>
-    <artifactId>[ARTIFACT]</artifactId>
-    <version>[VERSION]</version>
-  </dependency>
-.
-.
-```
-
-```bash
-mvn install
 ```

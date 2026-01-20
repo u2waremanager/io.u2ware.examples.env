@@ -2,18 +2,15 @@
 
 | Keyword | Description |
 | --- | --- | 
-| [IMAGE_NAME] | 이미지 이름|
-| [IMAGE_TAG] | 이미지 태그 또는 버전. latest|
+| [IMAGE_NAME] | mysql |
+| [IMAGE_TAG] | 9.5.0 or latest|
+| [CONTAINER_NAME] | guest-mysql |
 | [HOST_PORT] | HOST_PORT|
 | [HOST_VOLUMN] | HOST_VOLUMN|
-| [CONTAINER_NAME] | CONTAINER_NAME |
 | [MYSQL_DATABASE] | MYSQL_DATABASE |
 | [MYSQL_USER] | MYSQL_USER |
 | [MYSQL_PASSWORD] | MYSQL_PASSWORD |
 
-, 
-
-# Containing
 Usage :
 
 ```bash
@@ -39,21 +36,25 @@ mysql:9.5.0
 ```
 
 
-# Package
+# Github Packages
+
+## Build
 
 ```bash
-docker build \
---platform linux/arm64,linux/amd64 \
--t ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0 \
-.
+docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0 .
+```
+```bash
+[IMAGE_NAME]: ghcr.io/u2waremanager/io.u2ware.examples.env
+[IMAGE_TAG] : mysql-9.5.0
 ```
 
-# Publish
+
+## Push
 ```bash
 docker push ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0
 ```
 
-# Install
+# Pull
 ```bash
 docker pull ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0
 ```

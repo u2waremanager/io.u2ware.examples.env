@@ -1,5 +1,5 @@
 
-# [Working with the Container registry](https://docs.github.com/ko/packages/working-with-a-github-packages-registry/working-with-the-container-registry)  
+# Github Packages [Working with the Container registry](https://docs.github.com/ko/packages/working-with-a-github-packages-registry/working-with-the-container-registry)  
 
 | Keyword | Description |
 | --- | --- | 
@@ -10,13 +10,15 @@
 | [USER_TOKEN] | 계정 토큰 |
 | [NAMESPACE] | 개인 계정 또는 조직의 이름 |
 
-
-# Config (authentication)
+## Config (authentication)
 
 ```bash
-docker login ghcr.io -u [USER_NAME]
-    Password: [USER_TOKEN]
-    Login Succeeded
+docker login ghcr.io 
+
+Username: [USER_NAME]
+Password: [USER_TOKEN]
+
+Login Succeeded
 ```
 
 or 
@@ -32,29 +34,25 @@ docker login ghcr.io
 ```
 
 
+## Build
 
-# Build
 ```bash
-docker build -t ghcr.io/[NAMESPACE]/[IMAGE_NAME]:[IMAGE_TAG] .
+cd <Dockerfile>
+docker build --platform linux/arm64,linux/amd64 -t ghcr.io/[NAMESPACE]/[IMAGE_NAME]:[IMAGE_TAG] . 
 ```
 
-
-# Push (Publishing)
+## Push(Packaging)
 ```bash
 docker push ghcr.io/[NAMESPACE]/[IMAGE_NAME]:[IMAGE_TAG]
 ```
 
 
-# Remove
-```bash
-docker rmi ghcr.io/[NAMESPACE]/[IMAGE_NAME]:[IMAGE_TAG]
-```
-
-
-# Pull (Installing)
+## Pull (Installing)
 ```bash
 docker pull ghcr.io/[NAMESPACE]/[IMAGE_NAME]:[IMAGE_TAG]
 ```
+
+
 
 
 

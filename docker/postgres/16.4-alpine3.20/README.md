@@ -2,16 +2,15 @@
 
 | Keyword | Description |
 | --- | --- | 
-| [IMAGE_NAME] | 이미지 이름|
-| [IMAGE_TAG] | 이미지 태그 또는 버전. latest|
+| [IMAGE_NAME] | postgres|
+| [IMAGE_TAG] | 16.4-alpine3.20 or latest|
+| [CONTAINER_NAME] | guest-postgres |
 | [HOST_PORT] | HOST_PORT|
 | [HOST_VOLUMN] | HOST_VOLUMN|
-| [CONTAINER_NAME] | CONTAINER_NAME |
 | [POSTGRES_DB] | POSTGRES_DB |
 | [POSTGRES_USER] | POSTGRES_USER |
 | [POSTGRES_PASSWORD] | POSTGRES_PASSWORD |
 
-# Containing
 Usage :
 
 ```bash
@@ -39,23 +38,24 @@ postgres:16.4-alpine3.20
 ```
 
 
-# Package
+# Github Packages
 
+## Build
 ```bash
-docker build \
---platform linux/arm64,linux/amd64  \
--t ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20 \
-.
+docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20 .
+```
+```bash
+[IMAGE_NAME]: ghcr.io/u2waremanager/io.u2ware.examples.env
+[IMAGE_TAG] : postgres-16.4-alpine3.20
 ```
 
-
-# Publish
+## Push
 ```bash
 docker push ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20
 ```
 
 
-# Install
+# Pull
 ```bash
 docker pull ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20
 ```
