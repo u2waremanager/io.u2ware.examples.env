@@ -2,9 +2,9 @@
 
 | Keyword | Description |
 | --- | --- | 
-| [IMAGE_NAME] | postgres|
-| [IMAGE_TAG] | 16.4-alpine3.20 or latest|
-| [CONTAINER_NAME] | guest-postgres |
+| [IMAGE_NAME] | postgres |
+| [IMAGE_TAG] | 16.4-alpine3.20 or latest |
+| [CONTAINER_NAME] | CONTAINER_NAME |
 | [HOST_PORT] | HOST_PORT|
 | [HOST_VOLUMN] | HOST_VOLUMN|
 | [POSTGRES_DB] | POSTGRES_DB |
@@ -42,20 +42,17 @@ postgres:16.4-alpine3.20
 
 ## Build
 ```bash
-docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20 .
+docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env.postgres:16.4-alpine3.20 .
 ```
-```bash
-[IMAGE_NAME]: ghcr.io/u2waremanager/io.u2ware.examples.env
-[IMAGE_TAG] : postgres-16.4-alpine3.20
-```
+
 
 ## Push
 ```bash
-docker push ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20
+docker push ghcr.io/u2waremanager/io.u2ware.examples.env.postgres:16.4-alpine3.20
 ```
 
 
 # Pull
 ```bash
-docker pull ghcr.io/u2waremanager/io.u2ware.examples.env:postgres-16.4-alpine3.20
+docker pull ghcr.io/u2waremanager/io.u2ware.examples.env.postgres:16.4-alpine3.20
 ```

@@ -3,8 +3,8 @@
 | Keyword | Description |
 | --- | --- | 
 | [IMAGE_NAME] | mysql |
-| [IMAGE_TAG] | 9.5.0 or latest|
-| [CONTAINER_NAME] | guest-mysql |
+| [IMAGE_TAG] | 9.5.0 or latest |
+| [CONTAINER_NAME] | CONTAINER_NAME |
 | [HOST_PORT] | HOST_PORT|
 | [HOST_VOLUMN] | HOST_VOLUMN|
 | [MYSQL_DATABASE] | MYSQL_DATABASE |
@@ -36,26 +36,21 @@ mysql:9.5.0
 ```
 
 
-# Github Packages
+# Packages
 
 ## Build
-
 ```bash
-docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0 .
-```
-```bash
-[IMAGE_NAME]: ghcr.io/u2waremanager/io.u2ware.examples.env
-[IMAGE_TAG] : mysql-9.5.0
+docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env.mysql:9.5.0 .
 ```
 
 
 ## Push
 ```bash
-docker push ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0
+docker push ghcr.io/u2waremanager/io.u2ware.examples.env.mysql:9.5.0
 ```
 
 # Pull
 ```bash
-docker pull ghcr.io/u2waremanager/io.u2ware.examples.env:mysql-9.5.0
+docker pull ghcr.io/u2waremanager/io.u2ware.examples.env.mysql:9.5.0
 ```
 
