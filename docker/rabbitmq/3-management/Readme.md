@@ -12,8 +12,8 @@
 | [RABBITMQ_DEFAULT_PASS] | POSTGRES_PASSWORD |
 
 
-# Containing 
-Usage :
+
+### Usage :
 
 ```bash
 docker run -d \
@@ -40,16 +40,17 @@ rabbitmq:3-management
 
 # Package
 
+### Build
 ```bash
 docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env.rabbitmq:3-management .
 ```
 
-# Publish
+### Push
 ```bash
 docker push ghcr.io/u2waremanager/io.u2ware.examples.env.rabbitmq:3-management
 ```
 
-# Install
+### Pull
 ```bash
 docker pull ghcr.io/u2waremanager/io.u2ware.examples.env.rabbitmq:3-management
 ```

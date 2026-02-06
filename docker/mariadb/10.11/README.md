@@ -12,7 +12,7 @@
 | [MARIADB_PASSWORD] | MARIADB_PASSWORD |
 | [MARIADB_DATABASE] | MARIADB_DATABASE |
 
-Usage :
+### Usage :
 
 ```bash
 docker run -d \
@@ -26,7 +26,7 @@ docker run -d \
 [IMAGE_NAME]:[IMAGE_TAG]
 ```
 
-Example : 
+### Example : 
 ```bash
 docker run -d \
 -p 3306:3306 \
@@ -41,18 +41,18 @@ mariadb:10.11
 
 # Packages
 
-## Build
+### Build
 ```bash
 docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env.mariadb:10.11 .
 ```
 
 
-## Push
+### Push
 ```bash
 docker push ghcr.io/u2waremanager/io.u2ware.examples.env.mariadb:10.11
 ```
 
-# Pull
+### Pull
 ```bash
 docker pull ghcr.io/u2waremanager/io.u2ware.examples.env.mariadb:10.11
 ```

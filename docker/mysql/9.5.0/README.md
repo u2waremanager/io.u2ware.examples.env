@@ -11,7 +11,7 @@
 | [MYSQL_USER] | MYSQL_USER |
 | [MYSQL_PASSWORD] | MYSQL_PASSWORD |
 
-Usage :
+### Usage :
 
 ```bash
 docker run -d \
@@ -24,7 +24,7 @@ docker run -d \
 [IMAGE_NAME]:[IMAGE_TAG]
 ```
 
-Example : 
+### Example : 
 ```bash
 docker run -d \
 -p 3306:3306 \
@@ -38,18 +38,18 @@ mysql:9.5.0
 
 # Packages
 
-## Build
+### Build
 ```bash
 docker build --platform linux/arm64,linux/amd64 -t ghcr.io/u2waremanager/io.u2ware.examples.env.mysql:9.5.0 .
 ```
 
 
-## Push
+### Push
 ```bash
 docker push ghcr.io/u2waremanager/io.u2ware.examples.env.mysql:9.5.0
 ```
 
-# Pull
+### Pull
 ```bash
 docker pull ghcr.io/u2waremanager/io.u2ware.examples.env.mysql:9.5.0
 ```
